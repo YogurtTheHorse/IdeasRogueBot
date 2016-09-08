@@ -91,6 +91,7 @@ ENV/
 
 # Project trash
 users/
+ideas/
 config.py
 vk_config.json
 *.sublime-workspace
