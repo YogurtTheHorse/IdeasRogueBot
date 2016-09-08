@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import sys
 import config
@@ -12,7 +13,7 @@ variables = {
 }
 
 
-MONSTER_CODE = """name = {0}
+MONSTER_CODE = u"""name = '{0}'
 hp = {1}
 
 damage_range = ( {2}, {3} )
@@ -36,7 +37,7 @@ def gen_code(idea_id):
 	for line in lines:
 		k, v = line.split(': ')
 		if k in variables:
-			room_vars[variables[k]] = v
+			room_vars[variables[k]] = v[:-1]
 
 	return MONSTER_CODE.format(
 			room_vars['name'],
@@ -52,4 +53,6 @@ if __name__ == '__main__':
 		sys.exit()
 
 	for idea_id in sys.argv[1:]:
-		print(gen_code(idea_id))
+		print(str(gen_code(idea_id)))
+
+
