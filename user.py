@@ -85,7 +85,7 @@ class User(object):
 		idea_id = str(self.uid) + '_' + str(round(time.time() // 1000))
 		res = 'id: {0}\n'.format(idea_id) + self.get_result()
 
-		with open(config.IDEAS_PATH + '/{0}.i'.format(idea_id), 'w') as f:
+		with open(config.IDEAS_PATH + '/{0}.i'.format(idea_id), 'w', encoding='utf-8') as f:
 			f.write(res)
 
 		reply(res, uid=config.MODERS_CHAT)
