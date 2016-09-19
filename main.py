@@ -102,7 +102,7 @@ updater.dispatcher.add_handler(MessageHandler(False, msg))
 updater.dispatcher.add_error_handler(error_callback)
 
 logger.info('Starting polling...')
-updater.start_polling()
+updater.start_polling(poll_interval=0.001)
 
 logger.info('Bot now officially started!')
 updater.idle()

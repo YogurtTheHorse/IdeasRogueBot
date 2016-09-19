@@ -35,6 +35,9 @@ def gen_code(idea_id):
 		lines = f.readlines()
 
 	for line in lines:
+		if len(line.split(': ')) != 2:
+			continue
+
 		k, v = line.split(': ')
 		if k in variables:
 			room_vars[variables[k]] = v[:-1]
