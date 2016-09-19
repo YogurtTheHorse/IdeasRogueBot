@@ -149,3 +149,17 @@ other = {
 		}
 	]
 }
+
+podcast = {
+	'variables': {
+		'question': 'Вопрос'
+	},
+	'list': [
+		{
+			'text': 'Что бы ты хотел узнать?',
+			'checker': check_str,
+			'variable_name': 'question',
+			'failure': constants.WRONG_STR
+		}
+	]
+}

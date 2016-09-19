@@ -19,6 +19,7 @@ class User(object):
 			'new_pet': questions.new_pet,
 			'new_item': questions.new_item,
 			'feedback': questions.feedback,
+			'podcast': questions.podcast,
 			'other': questions.other
 		}
 
